@@ -7,6 +7,8 @@ import { FormValidationComponent } from './components/form-validation/form-valid
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   { path: '', component: FormValidationComponent },
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

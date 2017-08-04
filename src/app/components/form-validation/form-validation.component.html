@@ -1,3 +1,22 @@
 <p>
   form-validation works!
 </p>
+<!--{{diagnostic}}-->
+<div>
+  <form #signUpForm="ngForm">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" name="firstName" [(ngModel)]="model.firstName" name="firstname" required #spy>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" name="lastName" [(ngModel)]="model.lastName" name="lastname" required>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="model.password" name="password" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
